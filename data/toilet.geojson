@@ -1,0 +1,2398 @@
+const toilet = {
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.853",
+          "35.293"
+        ]
+      },
+      "properties": {
+        "name": "千秋子育て支援センター",
+        "address": "一宮市千秋町天摩字山畑370-56",
+        "floor": "",
+        "tel": "0586-28-9771",
+        "start": "9:00",
+        "exit": "16:00",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.822",
+          "35.345"
+        ]
+      },
+      "properties": {
+        "name": "浅井児童館",
+        "address": "一宮市浅井町大日比野字東若栗29",
+        "floor": "",
+        "tel": "0586-51-1140",
+        "start": "9:30",
+        "exit": "17:30",
+        "time_remarks": "",
+        "remarks1": "日曜日・祝休日・年末年始",
+        "remarks2": "利用の際には、児童館職員に声をかけてください。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.802",
+          "35.307"
+        ]
+      },
+      "properties": {
+        "name": "真清田神社前公衆便所",
+        "address": "一宮市真清田1丁目地内",
+        "floor": "",
+        "tel": "無し",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.797",
+          "35.303"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立中央図書館",
+        "address": "一宮市栄3丁目1番2号",
+        "floor": "5階〜7階",
+        "tel": "0586-72-2343",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "月曜日(祝休日を除く)・祝休日の翌日(土曜日・日曜日・祝休日を除く)・年末年始・整理休館日",
+        "remarks2": "オストメイト用設備は6階のみ、5階に幼児向けトイレあり（男の子用便器2基・こども用便座3基）"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.751",
+          "35.309"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立尾西図書館",
+        "address": "一宮市東五城字大平裏19番地1",
+        "floor": "1階",
+        "tel": "0586-62-8191",
+        "start": "10:00",
+        "exit": "18:00",
+        "time_remarks": "6〜8月平日のみ09:00〜19:00までの利用となります。",
+        "remarks1": "月曜日(祝休日を除く)・祝休日の翌日(土曜日・日曜日・祝休日を除く)・年末年始・整理休館日",
+        "remarks2": "乳幼児用設備は1階女子トイレに併設した多目的トイレのみ。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.768",
+          "35.34"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立玉堂記念木曽川図書館",
+        "address": "一宮市木曽川町外割田字西郷中25番地",
+        "floor": "1階〜3階",
+        "tel": "0586-84-2346",
+        "start": "10:00",
+        "exit": "18:00",
+        "time_remarks": "6〜8月平日のみ09:00〜19:00までの利用となります。",
+        "remarks1": "月曜日(祝休日を除く)・祝休日の翌日(土曜日・日曜日・祝休日を除く)・年末年始・整理休館日",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.816",
+          "35.307"
+        ]
+      },
+      "properties": {
+        "name": "子ども文化広場図書館",
+        "address": "一宮市朝日1-6-9",
+        "floor": "1階〜4階",
+        "tel": "0586-25‐1350",
+        "start": "9:00",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "第３木曜日（祝日の時はその前日）・月曜日（祝休日を除く）・祝休日の翌日（土・日・祝休日を除く）・年末年始・特別整理期間",
+        "remarks2": "車椅子使用者用設備及び非常呼出設備は１階のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.805",
+          "35.302"
+        ]
+      },
+      "properties": {
+        "name": "大志公民館",
+        "address": "一宮市大江3丁目9番14号",
+        "floor": "1階〜2階",
+        "tel": "0586-24-5206",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.806",
+          "35.341"
+        ]
+      },
+      "properties": {
+        "name": "葉栗出張所・葉栗公民館",
+        "address": "一宮市大毛字南出120番地",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9001",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.833",
+          "35.312"
+        ]
+      },
+      "properties": {
+        "name": "西成出張所・西成公民館",
+        "address": "一宮市小赤見字郷裏53番地",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9006",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.826",
+          "35.343"
+        ]
+      },
+      "properties": {
+        "name": "浅井町出張所・浅井公民館",
+        "address": "一宮市浅井町前野字郷西85番地",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9004",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.781",
+          "35.363"
+        ]
+      },
+      "properties": {
+        "name": "北方町出張所・北方公民館",
+        "address": "一宮市北方町北方字勅使53番地１",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9005",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.785",
+          "35.294"
+        ]
+      },
+      "properties": {
+        "name": "大和町出張所・大和公民館",
+        "address": "一宮市末広3丁目6番1号",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9006",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": "土曜日・日曜日・祝休日は9:00より利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.787",
+          "35.318"
+        ]
+      },
+      "properties": {
+        "name": "今伊勢町出張所・今伊勢公民館",
+        "address": "一宮市今伊勢町宮後字郷中茶原71番地３",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9007",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.759",
+          "35.279"
+        ]
+      },
+      "properties": {
+        "name": "萩原町出張所・萩原公民館",
+        "address": "一宮市萩原町萩原字河原崎79番地",
+        "floor": "1階",
+        "tel": "0586-28-9009",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.856",
+          "35.302"
+        ]
+      },
+      "properties": {
+        "name": "千秋町出張所・千秋公民館",
+        "address": "一宮市千秋町佐野字郷西48番地",
+        "floor": "1階〜2階",
+        "tel": "0586-28-9010",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "平日夜間・土曜日・日曜日・祝休日に公民館利用がある場合は、利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.765",
+          "35.317"
+        ]
+      },
+      "properties": {
+        "name": "開明公民館",
+        "address": "一宮市開明字柳苗代1番地１",
+        "floor": "1階〜2階",
+        "tel": "0586-43-8686",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.746",
+          "35.313"
+        ]
+      },
+      "properties": {
+        "name": "小信中島公民館・尾西生涯学習センター墨会館",
+        "address": "一宮市小信中島字南九反11番地１",
+        "floor": "1階",
+        "tel": "0586-62-5150",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.749",
+          "35.298"
+        ]
+      },
+      "properties": {
+        "name": "大徳公民館",
+        "address": "一宮市西五城字荒子中切63番地１",
+        "floor": "1階",
+        "tel": "0586-64-8383",
+        "start": "9:00",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.79",
+          "35.301"
+        ]
+      },
+      "properties": {
+        "name": "神山公民館",
+        "address": "一宮市野口1丁目6番22号",
+        "floor": "1階",
+        "tel": "0586-43-3001",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.735",
+          "35.279"
+        ]
+      },
+      "properties": {
+        "name": "尾西南部生涯学習センター・尾西南部公民館",
+        "address": "一宮市i明地字宮東38番地",
+        "floor": "1階",
+        "tel": "0586-69-7850",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.806",
+          "35.313"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立市民病院",
+        "address": "一宮市文京2丁目2番22号",
+        "floor": "南館A棟１階、南館B棟１階（救急外来一般）、南館B棟１階（救急外来小児）",
+        "tel": "0586-71-1911",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": "南館B棟１階（救急外来小児）は自動扉の設置がありません。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.808",
+          "35.314"
+        ]
+      },
+      "properties": {
+        "name": "市民病院第３駐車場",
+        "address": "一宮市松降通7丁目4番",
+        "floor": "駐車場出入口付近管理棟横",
+        "tel": "0586-71-1911",
+        "start": "8:00",
+        "exit": "17:30",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.776",
+          "35.331"
+        ]
+      },
+      "properties": {
+        "name": "一宮市リサイクルセンター",
+        "address": "一宮市奥町字六丁山52番地",
+        "floor": "2階〜3階",
+        "tel": "0586-45-7004",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "5/3〜5・土曜日・日曜日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.776",
+          "35.329"
+        ]
+      },
+      "properties": {
+        "name": "エコハウス１３８",
+        "address": "一宮市奥町字八瀬割40-1",
+        "floor": "1階〜2階、駐輪場",
+        "tel": "0586-47-7138",
+        "start": "10:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始・第１・第３水曜日",
+        "remarks2": "１階の２箇所と駐輪場の１箇所については乳幼児用設備なし"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.812",
+          "35.313"
+        ]
+      },
+      "properties": {
+        "name": "一宮市中保健センター",
+        "address": "一宮市貴船町3丁目2番地",
+        "floor": "1階〜2階",
+        "tel": "0586-72-1121",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日･年末年始",
+        "remarks2": "オストメイト用設備は1階のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8",
+          "35.284"
+        ]
+      },
+      "properties": {
+        "name": "一宮市博物館",
+        "address": "一宮市大和町妙興寺2390",
+        "floor": "1階",
+        "tel": "0586-46-3215",
+        "start": "9:30",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "月曜日(休日を除く）・休日（土日を除く）の翌日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.754",
+          "35.309"
+        ]
+      },
+      "properties": {
+        "name": "尾西庁舎",
+        "address": "一宮市東五城字備前12番地",
+        "floor": "1階〜6階",
+        "tel": "0586-85-8390",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "3,4階は8:30〜17:15の利用となります。",
+        "remarks1": "年末年始、※フロアによって異なります。(3,4階は土曜日・日曜日・祝休日)",
+        "remarks2": "オストメイト用設備は１階のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.752",
+          "35.308"
+        ]
+      },
+      "properties": {
+        "name": "市民会館前第２駐車場",
+        "address": "一宮市東五城字大平裏38番地",
+        "floor": "尾西市民会館前第2駐車場内",
+        "tel": "0586-85-8390",
+        "start": "8:00",
+        "exit": "22:00",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.746",
+          "35.308"
+        ]
+      },
+      "properties": {
+        "name": "一宮市三岸節子記念美術館",
+        "address": "一宮市小信中島字郷南3147-1",
+        "floor": "1階〜2階",
+        "tel": "0586-63-2892",
+        "start": "9:00",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "月曜日",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.801",
+          "35.322"
+        ]
+      },
+      "properties": {
+        "name": "療育サポートプラザ　チャイブ",
+        "address": "一宮市北丹町2番地",
+        "floor": "1階",
+        "tel": "0586-28-8288",
+        "start": "9:00",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "日曜日・祝休日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.774",
+          "35.351"
+        ]
+      },
+      "properties": {
+        "name": "一宮市北保健センター",
+        "address": "一宮市木曽川町黒田字中沼南ノ切27番地",
+        "floor": "1階〜2階",
+        "tel": "0586-86-1611",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日・年末年始",
+        "remarks2": "オストメイト用設備は1階のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.778",
+          "35.337"
+        ]
+      },
+      "properties": {
+        "name": "木曽川庁舎",
+        "address": "一宮市木曽川町内割田一の通り27番地",
+        "floor": "1階",
+        "tel": "0586-84-0005",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "北玄関からのみ24時間利用可能",
+        "remarks1": "土曜日・日曜日・祝休日・年末年始",
+        "remarks2": "開庁日の8：30〜17：15は玄関からも利用可能"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.775",
+          "35.332"
+        ]
+      },
+      "properties": {
+        "name": "一宮市一宮斎場",
+        "address": "一宮市奥町字六丁山24番地",
+        "floor": "1階〜2階",
+        "tel": "0586-45-4204",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "1月1日、友引の日",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.774",
+          "35.311"
+        ]
+      },
+      "properties": {
+        "name": "一宮市尾西斎場",
+        "address": "一宮市篭屋3丁目4番23号",
+        "floor": "1階",
+        "tel": "0586-45-2535",
+        "start": "8:30",
+        "exit": "17:15",
+        "time_remarks": "",
+        "remarks1": "1月1日、友引の日",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.797",
+          "35.303"
+        ]
+      },
+      "properties": {
+        "name": "尾張一宮駅前ビル（i-ビル）",
+        "address": "一宮市栄3丁目1-2",
+        "floor": "各階１つずつ",
+        "tel": "0586-28-9153",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "ビル内の他施設は開館時間、休館日がそれぞれ指定有り",
+        "remarks1": "無し",
+        "remarks2": "３階・５階・７階におむつ交換台有。他階は、ベビーチェアのみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.732",
+          "35.295"
+        ]
+      },
+      "properties": {
+        "name": "尾西グリーンプラザ",
+        "address": "一宮市冨田字砂原2120番地2",
+        "floor": "1階〜3階",
+        "tel": "0586-62-4165",
+        "start": "8:30",
+        "exit": "21:30",
+        "time_remarks": "",
+        "remarks1": "毎月第２・３月曜日（祝休日の場合は、その翌日以降の最初の平日）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.79",
+          "35.301"
+        ]
+      },
+      "properties": {
+        "name": "いちのみや中央プラザ体育館",
+        "address": "一宮市野口1丁目6番22号",
+        "floor": "2階〜3階",
+        "tel": "0586-82-0138",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "月曜日（祝休日を除く）・祝休日の翌日（土曜日・日曜日、祝休日を除く）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.79",
+          "35.301"
+        ]
+      },
+      "properties": {
+        "name": "いちのみや中央プラザ",
+        "address": "一宮市野口1丁目6番22号",
+        "floor": "１階共用スペース",
+        "tel": "無し",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.797",
+          "35.3"
+        ]
+      },
+      "properties": {
+        "name": "久古見公園",
+        "address": "一宮市新生二丁目10番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.792",
+          "35.303"
+        ]
+      },
+      "properties": {
+        "name": "橋呑公園",
+        "address": "一宮市神山一丁目7番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.796",
+          "35.312"
+        ]
+      },
+      "properties": {
+        "name": "音羽公園",
+        "address": "一宮市音羽三丁目13番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.789",
+          "35.303"
+        ]
+      },
+      "properties": {
+        "name": "富古場公園",
+        "address": "一宮市神山二丁目7番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.783",
+          "35.304"
+        ]
+      },
+      "properties": {
+        "name": "弁天公園",
+        "address": "一宮市神山三丁目4番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.796",
+          "35.296"
+        ]
+      },
+      "properties": {
+        "name": "南山公園",
+        "address": "一宮市新生四丁目10番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.791",
+          "35.297"
+        ]
+      },
+      "properties": {
+        "name": "低見公園",
+        "address": "一宮市末広一丁目9番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.789",
+          "35.3"
+        ]
+      },
+      "properties": {
+        "name": "南木公園",
+        "address": "一宮市住吉一丁目2番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.789",
+          "35.293"
+        ]
+      },
+      "properties": {
+        "name": "柳下公園",
+        "address": "一宮市昭和二丁目8番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.785",
+          "35.293"
+        ]
+      },
+      "properties": {
+        "name": "堀田公園",
+        "address": "一宮市末広三丁目10番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.816",
+          "35.301"
+        ]
+      },
+      "properties": {
+        "name": "常光公園",
+        "address": "一宮市緑二丁目9番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.823",
+          "35.286"
+        ]
+      },
+      "properties": {
+        "name": "若竹公園",
+        "address": "一宮市若竹二丁目6番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.81",
+          "35.306"
+        ]
+      },
+      "properties": {
+        "name": "天道公園",
+        "address": "一宮市羽衣一丁目7番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.832",
+          "35.283"
+        ]
+      },
+      "properties": {
+        "name": "天王前公園",
+        "address": "一宮市平島二丁目11番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.801",
+          "35.287"
+        ]
+      },
+      "properties": {
+        "name": "北三味公園",
+        "address": "一宮市妙興寺二丁目5番3",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.813",
+          "35.291"
+        ]
+      },
+      "properties": {
+        "name": "海道田公園",
+        "address": "一宮市森本二丁目16番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.822",
+          "35.28"
+        ]
+      },
+      "properties": {
+        "name": "縁葉公園",
+        "address": "一宮市あずら三丁目8番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.791",
+          "35.275"
+        ]
+      },
+      "properties": {
+        "name": "連田公園",
+        "address": "一宮市大和町戸塚字連田1番39外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.823",
+          "35.283"
+        ]
+      },
+      "properties": {
+        "name": "吾鬘公園",
+        "address": "一宮市あずら一丁目12番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.812",
+          "35.284"
+        ]
+      },
+      "properties": {
+        "name": "江畔公園",
+        "address": "一宮市多加木一丁目8番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.826",
+          "35.284"
+        ]
+      },
+      "properties": {
+        "name": "駒寄公園",
+        "address": "一宮市あずら二丁目23番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.815",
+          "35.282"
+        ]
+      },
+      "properties": {
+        "name": "中道公園",
+        "address": "一宮市多加木三丁目5番2、四丁目5番2",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.817",
+          "35.285"
+        ]
+      },
+      "properties": {
+        "name": "猿海道公園",
+        "address": "一宮市猿海道一丁目16番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.841",
+          "35.258"
+        ]
+      },
+      "properties": {
+        "name": "寺跡公園",
+        "address": "一宮市伝法寺八丁目14番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.84",
+          "35.267"
+        ]
+      },
+      "properties": {
+        "name": "西大門公園",
+        "address": "一宮市伝法寺五丁目2番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.846",
+          "35.269"
+        ]
+      },
+      "properties": {
+        "name": "大塚史跡公園",
+        "address": "一宮市伝法寺二丁目18番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.844",
+          "35.264"
+        ]
+      },
+      "properties": {
+        "name": "東畑公園",
+        "address": "一宮市伝法寺十丁目4番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.77",
+          "35.309"
+        ]
+      },
+      "properties": {
+        "name": "篭屋公園",
+        "address": "一宮市篭屋二丁目6番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.847",
+          "35.265"
+        ]
+      },
+      "properties": {
+        "name": "念佛公園",
+        "address": "一宮市伝法寺十一丁目4番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.746",
+          "35.281"
+        ]
+      },
+      "properties": {
+        "name": "明地東公園",
+        "address": "一宮市明地字寺浦32番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.843",
+          "35.268"
+        ]
+      },
+      "properties": {
+        "name": "新田公園",
+        "address": "一宮市伝法寺一丁目17番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.754",
+          "35.306"
+        ]
+      },
+      "properties": {
+        "name": "五色町公園",
+        "address": "一宮市三条字墓北87番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.839",
+          "35.343"
+        ]
+      },
+      "properties": {
+        "name": "宝生公園",
+        "address": "一宮市浅井町小日比野字大萩952番32外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.839",
+          "35.261"
+        ]
+      },
+      "properties": {
+        "name": "本郷公園",
+        "address": "一宮市伝法寺七丁目9番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.844",
+          "35.261"
+        ]
+      },
+      "properties": {
+        "name": "五輪ケ渕公園",
+        "address": "一宮市伝法寺十二丁目4番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.858",
+          "35.299"
+        ]
+      },
+      "properties": {
+        "name": "佐野公園",
+        "address": "一宮市千秋町佐野字郷前2762番外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.795",
+          "35.306"
+        ]
+      },
+      "properties": {
+        "name": "稲荷公園",
+        "address": "一宮市八幡一丁目10番1及び11番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.794",
+          "35.311"
+        ]
+      },
+      "properties": {
+        "name": "野黒公園",
+        "address": "一宮市音羽三丁目12番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.815",
+          "35.289"
+        ]
+      },
+      "properties": {
+        "name": "森本中央公園",
+        "address": "一宮市森本三丁目21番1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.816",
+          "35.277"
+        ]
+      },
+      "properties": {
+        "name": "多加木公園",
+        "address": "一宮市多加木五丁目5番2",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.799",
+          "35.297"
+        ]
+      },
+      "properties": {
+        "name": "梅ヶ枝公園",
+        "address": "一宮市中町一丁目1番1外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.844",
+          "35.265"
+        ]
+      },
+      "properties": {
+        "name": "伝法寺中央公園",
+        "address": "一宮市伝法寺四丁目9番",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.744",
+          "35.301"
+        ]
+      },
+      "properties": {
+        "name": "五城公園",
+        "address": "一宮市西五城字中川田50番地外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.76",
+          "35.308"
+        ]
+      },
+      "properties": {
+        "name": "尾西公園",
+        "address": "一宮市三条字賀11番地1外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.813",
+          "35.304"
+        ]
+      },
+      "properties": {
+        "name": "平島公園",
+        "address": "一宮市羽衣二丁目5番3外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.819",
+          "35.357"
+        ]
+      },
+      "properties": {
+        "name": "大野極楽寺公園",
+        "address": "一宮市浅井町大野字小屋裏1400",
+        "floor": "",
+        "tel": "0586-51-3015",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.799",
+          "35.359"
+        ]
+      },
+      "properties": {
+        "name": "光明寺公園",
+        "address": "一宮市光明寺字浦崎〜大日",
+        "floor": "",
+        "tel": "0586-51-3015",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.748",
+          "35.329"
+        ]
+      },
+      "properties": {
+        "name": "木曽川緑地",
+        "address": "一宮市奥町字堤下1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.75",
+          "35.272"
+        ]
+      },
+      "properties": {
+        "name": "萬葉公園",
+        "address": "一宮市萩原町戸苅、築込、高松",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.736",
+          "35.309"
+        ]
+      },
+      "properties": {
+        "name": "木曽川尾西緑地",
+        "address": "一宮市冨田地内外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.815",
+          "35.294"
+        ]
+      },
+      "properties": {
+        "name": "第一分区園",
+        "address": "一宮市森本一丁目16番1外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.762",
+          "35.267"
+        ]
+      },
+      "properties": {
+        "name": "萩原南緑地",
+        "address": "一宮市萩原町高木字三ツ屋29番1外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.748",
+          "35.298"
+        ]
+      },
+      "properties": {
+        "name": "大徳ふれあい池緑地",
+        "address": "一宮市西五城字荒子中切地内",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.742",
+          "35.275"
+        ]
+      },
+      "properties": {
+        "name": "鞆江緑地公園",
+        "address": "一宮市明地字鞆",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.731",
+          "35.269"
+        ]
+      },
+      "properties": {
+        "name": "広口池緑地",
+        "address": "一宮市明地字御屋敷東22番地1",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.735",
+          "35.272"
+        ]
+      },
+      "properties": {
+        "name": "阿古井池公園",
+        "address": "一宮市明地字江口3番外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.815",
+          "35.319"
+        ]
+      },
+      "properties": {
+        "name": "大江川緑道",
+        "address": "一宮市丹羽外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.764",
+          "35.292"
+        ]
+      },
+      "properties": {
+        "name": "一の宮井筋緑道",
+        "address": "一宮市萩原町富田方外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.765",
+          "35.346"
+        ]
+      },
+      "properties": {
+        "name": "奥村井筋緑道",
+        "address": "一宮市木曽川町玉ノ井外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.749",
+          "35.32"
+        ]
+      },
+      "properties": {
+        "name": "尾西緑道",
+        "address": "一宮市小信中島字萱場外",
+        "floor": "",
+        "tel": "0586-28-8634",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.809",
+          "35.358"
+        ]
+      },
+      "properties": {
+        "name": "国営木曽三川公園138タワーパーク",
+        "address": "一宮市光明寺字浦崎21-3",
+        "floor": "",
+        "tel": "0586-51-7105",
+        "start": "9:30",
+        "exit": "17:00",
+        "time_remarks": "8/13〜8/15及び11/23〜12/25は終了時間21:00",
+        "remarks1": "毎月第二月曜日（８・１２月を除く/休日の場合は直後の平日）",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.736",
+          "35.306"
+        ]
+      },
+      "properties": {
+        "name": "一宮市尾西歴史民俗資料館",
+        "address": "一宮市起字下町211",
+        "floor": "1階",
+        "tel": "0586-62-9711",
+        "start": "9:00",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "月曜日・祝休日の翌日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.803",
+          "35.304"
+        ]
+      },
+      "properties": {
+        "name": "一宮市役所本庁舎",
+        "address": "一宮市本町2丁目5番6号",
+        "floor": "1階〜14階各フロア",
+        "tel": "0586-28-8100",
+        "start": "8:00",
+        "exit": "17:45",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日・年末年始",
+        "remarks2": "1階のみユニバーサルシート有"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.802",
+          "35.304"
+        ]
+      },
+      "properties": {
+        "name": "一宮市役所本庁舎屋外便所",
+        "address": "一宮市本町2丁目4番地内",
+        "floor": "屋外",
+        "tel": "無し",
+        "start": "0:00",
+        "exit": "23:59",
+        "time_remarks": "",
+        "remarks1": "無し",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.782",
+          "35.307"
+        ]
+      },
+      "properties": {
+        "name": "公益財団法人　一宮地場産業ファッションデザインセンター",
+        "address": "一宮市大和町馬引字南正亀4-1",
+        "floor": "１階トイレ前",
+        "tel": "0586-46-1361",
+        "start": "8:45",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "土曜日・日曜日・祝休日・年末年始（貸館の利用がある場合は利用可能です）",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.845",
+          "35.325"
+        ]
+      },
+      "properties": {
+        "name": "一宮地域文化広場",
+        "address": "一宮市時之島字玉振1番地1",
+        "floor": "1階",
+        "tel": "0586-51-2180",
+        "start": "9:00",
+        "exit": "16:30",
+        "time_remarks": "",
+        "remarks1": "月曜日（ただし、祝休日の場合はその翌日以降最初の平日）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.819",
+          "35.307"
+        ]
+      },
+      "properties": {
+        "name": "一宮市民会館",
+        "address": "一宮市朝日2丁目5番1号",
+        "floor": "1階、2階",
+        "tel": "0586-71-2021",
+        "start": "9:00",
+        "exit": "20:00",
+        "time_remarks": "",
+        "remarks1": "第1・第3火曜日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.752",
+          "35.309"
+        ]
+      },
+      "properties": {
+        "name": "一宮市尾西市民会館",
+        "address": "一宮市東五城字大平裏43番地1",
+        "floor": "1階",
+        "tel": "0586-62-8222",
+        "start": "9:00",
+        "exit": "17:00",
+        "time_remarks": "",
+        "remarks1": "第1・第3火曜日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.778",
+          "35.337"
+        ]
+      },
+      "properties": {
+        "name": "一宮市木曽川文化会館",
+        "address": "一宮市木曽川町内割田一の通り27番地",
+        "floor": "1階ホールロビー",
+        "tel": "0586-86-7581",
+        "start": "8:30",
+        "exit": "21:30",
+        "time_remarks": "",
+        "remarks1": "第2・第4火曜日（ただし、祝休日の場合はその翌日以降最初の平日）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.801",
+          "35.308"
+        ]
+      },
+      "properties": {
+        "name": "一宮スポーツ文化センター",
+        "address": "一宮市真清田1丁目2番30号",
+        "floor": "1階・3階",
+        "tel": "0586-24-1881",
+        "start": "9:00",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "第1・第3月曜日・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.825",
+          "35.286"
+        ]
+      },
+      "properties": {
+        "name": "アイプラザ一宮",
+        "address": "一宮市若竹3丁目1番12号",
+        "floor": "1階、1階講堂内、2階",
+        "tel": "0586-77-6612",
+        "start": "8:30",
+        "exit": "21:30",
+        "time_remarks": "17時45分以降、女性スタッフによる人的支援が必要時に対応できない場合があります。",
+        "remarks1": "第3・第4月曜日（ただし、祝休日の場合はその翌日以降最初の平日）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.799",
+          "35.358"
+        ]
+      },
+      "properties": {
+        "name": "一宮市総合体育館",
+        "address": "一宮市光明寺字白山前20番地",
+        "floor": "1階 第2競技場ロビー、2階 第1競技場ロビー",
+        "tel": "0586-53-6300",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "第1・第3水曜（祝休日を除く）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.743",
+          "35.303"
+        ]
+      },
+      "properties": {
+        "name": "一宮市尾西スポーツセンター",
+        "address": "一宮市西五城字中川田36番地",
+        "floor": "1階玄関ロビー",
+        "tel": "0586-61-5531",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "月曜日（ただし、祝休日の場合はその翌日以降最初の平日）・祝休日の翌日(ただし、その日が土曜日・日曜日・祝休日に当たる日を除く）・年末年始",
+        "remarks2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.791",
+          "35.337"
+        ]
+      },
+      "properties": {
+        "name": "一宮市木曽川体育館",
+        "address": "一宮市木曽川町門間字沼間35番地",
+        "floor": "1階 廊下",
+        "tel": "0586-86-6600",
+        "start": "8:30",
+        "exit": "21:00",
+        "time_remarks": "",
+        "remarks1": "月曜日（ただし、祝休日の場合はその翌日以降最初の平日）・祝休日の翌日(ただし、その日が土曜日・日曜日・祝休日に当たる日を除く）・年末年始",
+        "remarks2": "ユニバーサルシートは1階のみ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.825",
+          "35.287"
+        ]
+      },
+      "properties": {
+        "name": "一宮市温水プール",
+        "address": "一宮市若竹３丁目１番５号",
+        "floor": "１階",
+        "tel": "0586-77-4727",
+        "start": "8:30",
+        "exit": "20:30",
+        "time_remarks": "",
+        "remarks1": "月曜日（ただし、祝休日の場合はその翌日以降最初の平日）・祝休日の翌日(ただし、その日が土曜日・日曜日・祝休日に当たる日を除く）・年末年始",
+        "remarks2": ""
+      }
+    }
+  ]
+};

@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<title>一宮市ママパパマップ</title>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta property="og:title" content="一宮市ママパパマップ" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="./images/ogp.png" />
+	<meta name="description" content="ママパパマップは、赤ちゃんの授乳やおむつ替えが快適に行えるスポットを地図上に示すアプリです。親と赤ちゃんのストレスを軽減し、公共の場での安心感を提供します。子育てをより楽しく、スムーズにするマップです。" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="一宮市ママパパマップ" />
+	<meta name="twitter:image" content="./images/ogp.png" />
+	<meta name="author" content="仁志">
+	<meta name="keywords" content="一宮市,子育て,子育て支援,ママパパマップ,授乳スペース"/>
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="images/apple-touch-icon.png">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.min.js" integrity="sha512-0A4MbfuZq5Au9EdpI1S5rUTXlibNBi8CuZ/X3ycwXyZiCjNzpiO9YH6EMqPgzZm6vfNCuZStBQHjnO17nIC0IQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js" integrity="sha512-8BqQ2RH4L4sQhV41ZB24fUc1nGcjmrTA6DILV/aTPYuUzo+wBdYdp0fvQ76Sxgf36p787CXF7TktWlcxu/zyOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script src="data/toilet.geojson"></script>
+
+
+	<style>
+
+		html, body, #map{
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		.awesome-marker {
+			font-size: 15px;
+			padding-top: 5px;
+		}
+
+	</style>
+
+	<title>一宮市ママパパマップ</title>
+
+	<script type="module">
+
+		onload = async () => {
+
+			const map = L.map('map', {
+				center: [35.3024, 136.7984],
+				minZoom: 4,
+				zoom: 13
+			});
+
+			const hash = new L.Hash(map);
+
+			const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+			}).addTo(map);
+
+			let pref= L.geoJSON(toilet,{onEachFeature: popup_pin, pointToLayer: toilet_pink}).addTo(map);
+
+			map.addLayer(pref);
+
+		}
+
+		/* Font Awesome */
+		let toilet_pink =  (feature, latlng) => {
+			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'baby', prefix: 'fa', markerColor: 'pink'}) });
+			return marker;
+		}
+
+		/* Popup Display */
+		let popup_pin = (feature, layer) => {
+			let popup;
+			if (feature.properties && feature.properties.name) {
+				popup = "名称：" + feature.properties.name;
+
+				popup += "<br>住所：" + feature.properties.address;
+
+				popup += "<br>TEL：" + feature.properties.tel;
+
+				if(feature.properties.floor != ""){
+					popup += "<br>場所：" + feature.properties.floor;
+				}else{}
+
+				if(feature.properties.start != ""){
+					popup += "<br>時間帯：" + feature.properties.start + "〜" + feature.properties.exit;
+				}else{}
+
+				if(feature.properties.time_remarks != ""){
+					popup += "<br>※" + feature.properties.time_remarks; 
+				}else{}
+
+				if(feature.properties.remarks1 != ""){
+					popup += "<br><br>備考：" + feature.properties.remarks1; 
+				}else{}	
+
+				if(feature.properties.remarks2 != ""){
+					popup += "、" + feature.properties.remarks2; 
+				}else{}
+
+
+			}else{};
+
+			layer.bindPopup(popup);
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<div id='map'></div>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPP84V2NHB"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-MPP84V2NHB');
+	</script>
+
+</body>
+</html>
