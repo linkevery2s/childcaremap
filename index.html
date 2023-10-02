@@ -29,6 +29,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<script src="data/toilet.geojson"></script>
+	<script src="data/milk.geojson"></script>
 
 
 	<style>
@@ -66,9 +67,13 @@
 				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 			}).addTo(map);
 
-			let pref= L.geoJSON(toilet,{onEachFeature: popup_pin, pointToLayer: toilet_pink}).addTo(map);
+			let toilet_m= L.geoJSON(toilet,{onEachFeature: popup_toilet, pointToLayer: toilet_pink}).addTo(map);
 
-			map.addLayer(pref);
+			map.addLayer(toilet_m);
+
+			let milk_m= L.geoJSON(milk,{onEachFeature: popup_milk, pointToLayer: milk_blue}).addTo(map);
+
+			map.addLayer(milk_m);
 
 		}
 
@@ -78,8 +83,13 @@
 			return marker;
 		}
 
+		let milk_blue =  (feature, latlng) => {
+			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'person-breastfeeding', prefix: 'fa', markerColor: 'blue'}) });
+			return marker;
+		}		
+
 		/* Popup Display */
-		let popup_pin = (feature, layer) => {
+		let popup_toilet = (feature, layer) => {
 			let popup;
 			if (feature.properties && feature.properties.name) {
 				popup = "名称：" + feature.properties.name;
@@ -113,6 +123,34 @@
 
 			layer.bindPopup(popup);
 		}
+
+		let popup_milk = (feature, layer) => {
+			let popup;
+			if (feature.properties && feature.properties.name) {
+				popup = "名称：" + feature.properties.name;
+
+				popup += "<br>住所：" + feature.properties.address;
+
+				popup += "<br>TEL：" + feature.properties.tel;
+
+				if(feature.properties.place != ""){
+					popup += "<br>場所：<br>" + feature.properties.place;
+				}else{}
+
+				if(feature.properties.time != ""){
+					popup += "<br><br>時間帯：" + feature.properties.time;
+				}else{}
+
+				if(feature.properties.url != ""){
+					popup += "<br><br><a href='" + feature.properties.url +"' target='_blank'>詳細URL</a>"; 
+				}else{}
+
+
+			}else{};
+
+			layer.bindPopup(popup);
+		}
+
 
 	</script>
 
