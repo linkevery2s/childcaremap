@@ -6,11 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta property="og:title" content="一宮市ママパパマップ" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="./images/ogp.png" />
+	<meta property="og:image" content="./images/ogp.jpg" />
 	<meta name="description" content="ママパパマップは、赤ちゃんの授乳やおむつ替えが快適に行えるスポットを地図上に示すアプリです。親と赤ちゃんのストレスを軽減し、公共の場での安心感を提供します。子育てをより楽しく、スムーズにするマップです。" />
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="一宮市ママパパマップ" />
-	<meta name="twitter:image" content="./images/ogp.png" />
+	<meta name="twitter:image" content="./images/ogp.jpg" />
 	<meta name="author" content="仁志">
 	<meta name="keywords" content="一宮市,子育て,子育て支援,ママパパマップ,授乳スペース"/>
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -55,6 +55,8 @@
 
 	<script type="module">
 
+		import { green } from "https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode@main/leaflet/marker_color/marker_color.mjs";
+
 		onload = async () => {
 
 			const map = L.map('map', {
@@ -81,7 +83,7 @@
 			map.addLayer(milk_m);
 
 			/* ちびっ子広場 */
-			let square_m= L.geoJSON(square, {onEachFeature: popup_square, pointToLayer: square_green});
+			let square_m= L.geoJSON(square, {onEachFeature: popup_square, pointToLayer: green});
 
 			map.addLayer(square_m);
 
@@ -108,10 +110,10 @@
 			return marker;
 		}
 
-		let square_green =  (feature, latlng) => {
+		/*let square_green =  (feature, latlng) => {
 			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'tree', prefix: 'fa', markerColor: 'green'}) });
 			return marker;
-		}
+		}*/
 
 		let child_orange =  (feature, latlng) => {
 			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'home', prefix: 'fa', markerColor: 'orange'}) });
