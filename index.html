@@ -30,6 +30,9 @@
 
 	<script src="data/toilet.geojson"></script>
 	<script src="data/milk.geojson"></script>
+	<script src="data/square.geojson"></script>
+	<script src="data/child.geojson"></script>
+	<script src="data/childrenhouse.geojson"></script>
 
 
 	<style>
@@ -67,13 +70,30 @@
 				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 			}).addTo(map);
 
-			let toilet_m= L.geoJSON(toilet,{onEachFeature: popup_toilet, pointToLayer: toilet_pink}).addTo(map);
+			/* 乳幼児対応トイレ */
+			let toilet_m= L.geoJSON(toilet, {onEachFeature: popup_toilet, pointToLayer: toilet_pink});
 
 			map.addLayer(toilet_m);
 
-			let milk_m= L.geoJSON(milk,{onEachFeature: popup_milk, pointToLayer: milk_blue}).addTo(map);
+			/* 赤ちゃんの駅 */
+			let milk_m= L.geoJSON(milk, {onEachFeature: popup_milk, pointToLayer: milk_blue});
 
 			map.addLayer(milk_m);
+
+			/* ちびっ子広場 */
+			let square_m= L.geoJSON(square, {onEachFeature: popup_square, pointToLayer: square_green});
+
+			map.addLayer(square_m);
+
+			/* 子育て支援センター */
+			let child_m= L.geoJSON(child, {onEachFeature: popup_child, pointToLayer: child_orange});
+
+			map.addLayer(child_m);
+
+			/* 児童館 */
+			let childrenhouse_m = L.geoJSON(childrenhouse, {onEachFeature: popup_childrenhouse, pointToLayer: childrenhouse_brown});
+
+			map.addLayer(childrenhouse_m);
 
 		}
 
@@ -86,7 +106,23 @@
 		let milk_blue =  (feature, latlng) => {
 			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'person-breastfeeding', prefix: 'fa', markerColor: 'blue'}) });
 			return marker;
-		}		
+		}
+
+		let square_green =  (feature, latlng) => {
+			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'tree', prefix: 'fa', markerColor: 'green'}) });
+			return marker;
+		}
+
+		let child_orange =  (feature, latlng) => {
+			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'home', prefix: 'fa', markerColor: 'orange'}) });
+			return marker;
+		}
+
+		let childrenhouse_brown =  (feature, latlng) => {
+			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'home', prefix: 'fa', markerColor: 'brown'}) });
+			return marker;
+		}
+
 
 		/* Popup Display */
 		let popup_toilet = (feature, layer) => {
@@ -150,6 +186,42 @@
 
 			layer.bindPopup(popup);
 		}
+
+		let popup_square = (feature, layer) => {
+			let popup;
+			if (feature.properties && feature.properties.name) {
+				popup = "名称：" + feature.properties.name;
+
+				popup += "<br>住所：" + feature.properties.address;
+
+			}else{};
+
+			layer.bindPopup(popup);
+		}
+
+		let popup_child = (feature, layer) => {
+			let popup;
+			if (feature.properties && feature.properties.name) {
+				popup = "名称：" + feature.properties.name;
+
+				popup += "<br>住所：" + feature.properties.address;
+
+			}else{};
+
+			layer.bindPopup(popup);
+		}		
+
+		let popup_childrenhouse = (feature, layer) => {
+			let popup;
+			if (feature.properties && feature.properties.name) {
+				popup = "名称：" + feature.properties.name;
+
+				popup += "<br>住所：" + feature.properties.address;
+
+			}else{};
+
+			layer.bindPopup(popup);
+		}	
 
 
 	</script>

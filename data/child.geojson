@@ -1,0 +1,154 @@
+const child = {
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7977083",
+          "35.30272331"
+        ]
+      },
+      "properties": {
+        "name": "ファミリー・サポート・センター",
+        "address": "一宮市栄3丁目1番2号（尾張一宮駅前ビル（i-ビル）5階（中央子育て支援センター内）)",
+        "tel": "0586-28-9772"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8167332",
+          "35.32699149"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立いずみ学園",
+        "address": "一宮市浅井町西浅井字弐軒家58番地",
+        "tel": "0586-78-2767"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7483315",
+          "35.3047883"
+        ]
+      },
+      "properties": {
+        "name": "一宮市すぎの子教室",
+        "address": "一宮市東五城字南田尾40番地",
+        "tel": "0586-28-9765"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7535295",
+          "35.30854931"
+        ]
+      },
+      "properties": {
+        "name": "一宮市東五城子育て支援センター",
+        "address": "一宮市東五城字備前12番地（尾西庁舎２階）",
+        "tel": "0586-85-9339"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.762941",
+          "35.34155126"
+        ]
+      },
+      "properties": {
+        "name": "一宮市たけのこ園",
+        "address": "一宮市木曽川町里小牧字道路寺35番地",
+        "tel": "0586-28-9766"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7643544",
+          "35.34925658"
+        ]
+      },
+      "properties": {
+        "name": "一宮市里小牧子育て支援センター",
+        "address": "一宮市木曽川町里小牧字神明東5番地1（里小牧保育園）",
+        "tel": "0586-28-9770"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7859745",
+          "35.34921537"
+        ]
+      },
+      "properties": {
+        "name": "一宮市黒田北子育て支援センター",
+        "address": "一宮市木曽川町黒田字篭守西108番地（黒田北保育園内）",
+        "tel": "0586-28-9769"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.85304",
+          "35.29271418"
+        ]
+      },
+      "properties": {
+        "name": "一宮市千秋子育て支援センター",
+        "address": "一宮市千秋町天摩字山畑370番地56",
+        "tel": "0586-28-9771"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8275241",
+          "35.27604422"
+        ]
+      },
+      "properties": {
+        "name": "一宮市丹陽子育て支援センター",
+        "address": "一宮市三ツ井3丁目2番37号",
+        "tel": "0586-28-9146"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7976691",
+          "35.30282677"
+        ]
+      },
+      "properties": {
+        "name": "一宮市中央子育て支援センター",
+        "address": "一宮市栄3丁目1番2号（尾張一宮駅前ビル（i-ビル）5階）",
+        "tel": "0586-85-7026"
+      }
+    }
+  ]
+};

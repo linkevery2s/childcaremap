@@ -1,0 +1,379 @@
+const childrenhouse = {
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7899906",
+          "35.34076312"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立黒田南児童館",
+        "address": "一宮市木曽川町黒田八ノ通り176番地",
+        "tel": "0586-87-6523"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8386164",
+          "35.27588352"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立丹陽児童館",
+        "address": "一宮市三ツ井5丁目3番14号",
+        "tel": "0586-76-0508"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7923638",
+          "35.32307873"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立今伊勢児童館",
+        "address": "一宮市今伊勢町新神戸字乾31番地1",
+        "tel": "0586-24-1767"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7826656",
+          "35.35894982"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立北方児童館",
+        "address": "一宮市北方町北方字森道87番地1",
+        "tel": "0586-87-3757"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8598141",
+          "35.29949955"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立千秋児童館",
+        "address": "一宮市千秋町佐野字下川田43番地",
+        "tel": "0586-76-7222"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8101922",
+          "35.29832792"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立向山児童館",
+        "address": "一宮市古金町2丁目10番地",
+        "tel": "0586-72-1269"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7863351",
+          "35.28724986"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立大和児童館",
+        "address": "一宮市大和町苅安賀字上東出68番地",
+        "tel": "0586-46-2612"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8042801",
+          "35.29994156"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立大志児童館",
+        "address": "一宮市大志1丁目9番2号",
+        "tel": "0586-24-1747"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.765436",
+          "35.32638666"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立奥児童館",
+        "address": "一宮市奥町字上平池46番地",
+        "tel": "0586-61-5300"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8006775",
+          "35.31273902"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立宮西児童館",
+        "address": "一宮市大宮4丁目6番13号",
+        "tel": "0586-73-2877"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8158421",
+          "35.30424831"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立富士児童館",
+        "address": "一宮市富士1丁目8番15号",
+        "tel": "0586-71-1022"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8219143",
+          "35.34497902"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立浅井児童館",
+        "address": "一宮市浅井町大日比野字東若栗29番地",
+        "tel": "0586-51-1140"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.791805",
+          "35.30694932"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立神山児童館",
+        "address": "一宮市八幡3丁目8番2号",
+        "tel": "0586-45-2500"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7662254",
+          "35.27730283"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立萩原児童館",
+        "address": "一宮市萩原町串作字河室浦18番地",
+        "tel": "0586-69-6731"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8052802",
+          "35.34053225"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立葉栗児童館",
+        "address": "一宮市大毛字南出116番地",
+        "tel": "0586-51-5858"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8275874",
+          "35.31899662"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立西成児童館",
+        "address": "一宮市大赤見字大山22番地1",
+        "tel": "0586-76-5656"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.8122865",
+          "35.31221516"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立貴船児童館",
+        "address": "一宮市下沼町1丁目7番地",
+        "tel": "0586-73-2533"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7582271",
+          "35.30444497"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立三条児童館",
+        "address": "一宮市三条字郷南西35番地",
+        "tel": "0586-61-1670"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7491114",
+          "35.29612266"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立大徳児童館",
+        "address": "一宮市西五城字荒子中切28番地1（大徳小学校内）",
+        "tel": "0586-61-5551"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7468552",
+          "35.31484302"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立小信中島児童館",
+        "address": "一宮市小信中島字南平口63番地（小信中島小学校内）",
+        "tel": "0586-62-2900"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.738433",
+          "35.27926875"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立朝日東児童館",
+        "address": "一宮市明地字上平33番地1（尾西児童図書館内）",
+        "tel": "0586-69-5980"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7401183",
+          "35.30642868"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立起児童館",
+        "address": "一宮市起字西生出33番地（起小学校内）",
+        "tel": "0586-62-3398"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7722261",
+          "35.32213006"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立開明児童館",
+        "address": "一宮市開明字杁西郭69番地1",
+        "tel": "0586-45-3327"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7655947",
+          "35.33888884"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立外割田児童館",
+        "address": "一宮市木曽川町外割田字西郷西134番地",
+        "tel": "0586-87-5323"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "136.7797744",
+          "35.34467932"
+        ]
+      },
+      "properties": {
+        "name": "一宮市立黒田児童館",
+        "address": "一宮市木曽川町黒田字城西27番地4",
+        "tel": "0586-87-6923"
+      }
+    }
+  ]
+};
