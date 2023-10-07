@@ -7,14 +7,14 @@
 	<meta property="og:title" content="一宮市ママパパマップ" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="./images/ogp.jpg" />
-	<meta name="description" content="ママパパマップは、赤ちゃんの授乳やおむつ替えが快適に行えるスポットを地図上に示すアプリです。親と赤ちゃんのストレスを軽減し、公共の場での安心感を提供します。子育てをより楽しく、スムーズにするマップです。" />
+	<meta name="description" content="一宮市ママパパマップは、赤ちゃんの授乳やおむつ替えが快適に行えるスポットを地図上に示すアプリです。親と赤ちゃんのストレスを軽減し、公共の場での安心感を提供します。子育てをより楽しく、スムーズにするマップです。" />
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="一宮市ママパパマップ" />
 	<meta name="twitter:image" content="./images/ogp.jpg" />
 	<meta name="author" content="仁志">
 	<meta name="keywords" content="一宮市,子育て,子育て支援,ママパパマップ,授乳スペース"/>
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="shortcut icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+	<link rel="shortcut icon" href="./images/apple-touch-icon.png">
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
@@ -54,6 +54,151 @@
 			padding-top: 5px;
 		}
 
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		.modal {
+			display: none;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 20;
+			animation-name: fadeIn;
+			animation-duration: 2s;
+		}
+
+		.modal_bg {
+			background: rgba(0, 0, 0, 0.8);
+			height: 100vh;
+			position: absolute;
+			width: 100%;
+		}
+
+		.modal_content {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 85%;
+			max-width: 600px;
+			background: #ffffff;
+			padding: 10px;
+			height: 450px;
+
+		}
+
+		.closed {
+			position: absolute;
+			right: 0px;
+			top: -40px;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			z-index: 30;
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			color: #ffffff;
+			line-height: 25px;
+			cursor: pointer;
+			border: 1px solid #ffffff;
+			background: rgba(255, 255, 255, .25);
+		}
+
+		.closed:hover{
+			background: rgba(255, 255, 255, .65);
+		}
+
+		.closed a {
+			text-decoration: none;
+			border: none;
+		}
+
+		.js-modal-close{
+			color: #ffffff;
+		}
+
+		h1{
+			position: relative;
+		}
+
+		h1:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 7px;
+			background: -webkit-repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+			background: repeating-linear-gradient(-45deg, #6ad1c8, #6ad1c8 2px, #fff 2px, #fff 4px);
+		}
+
+		.kaisetu{
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+			overflow-y: scroll;
+		}
+
+		.kaisetu a{
+			color: #16a085 !important;
+			border-bottom: 1px dotted #16a085;;
+		}
+
+		#baby{
+			background: pink;
+			color: #ffffff;
+			padding: 10px;
+			border-radius: 100%;
+		}
+
+		#person_breastfeeding{
+			background: #33CCFF;
+			color: #ffffff;
+			padding: 10px;
+			border-radius: 100%;	
+		}
+
+		#home_orange{
+			background: orange;
+			color: #ffffff;
+			padding: 10px;
+			border-radius: 100%;	
+		}
+
+		#home_brown{
+			background: brown;
+			color: #ffffff;
+			padding: 10px;
+			border-radius: 100%;	
+		}
+
+		#park{
+			background: green;
+			padding: 10px;
+			border-radius: 100%;	
+		}
+
+		#mail_submit{
+			border-radius: 5px;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+
+
 	</style>
 
 	<title>一宮市ママパパマップ</title>
@@ -62,9 +207,11 @@
 
 		import { green } from "https://cdn.jsdelivr.net/gh/linkevery2s/sourcecode@main/leaflet/marker_color/marker_color.mjs";
 
+		let map;
+
 		onload = async () => {
 
-			const map = L.map('map',{zoomControl: false});
+			map = L.map('map',{zoomControl: false});
 
 			/* コントロールボタン */
 			L.control.zoom( { position: 'topright' } ).addTo( map );
@@ -116,11 +263,6 @@
 			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'person-breastfeeding', prefix: 'fa', markerColor: 'blue'}) });
 			return marker;
 		}
-
-		/*let square_green =  (feature, latlng) => {
-			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'tree', prefix: 'fa', markerColor: 'green'}) });
-			return marker;
-		}*/
 
 		let child_orange =  (feature, latlng) => {
 			let marker = new L.marker(latlng, {icon: L.AwesomeMarkers.icon({icon: 'home', prefix: 'fa', markerColor: 'orange'}) });
@@ -232,11 +374,66 @@
 			layer.bindPopup(popup);
 		}	
 
+
+		window.display = () =>{
+
+			document.querySelector(".js-modal").style.display ="block";
+
+		}
+
+		window.closed2 = () =>{
+
+			document.querySelector(".js-modal").style.display ="none";
+		}
+
+		window.display2 = () =>{
+
+			let url_value = location.href;
+
+			document.querySelector("#link_url").value = url_value;
+
+			jQuery('#qr_code').qrcode({
+				text: url_value
+			});	
+
+			document.querySelector(".js-modal2").style.display ="block";
+
+		}
+
+		window.closed3 = () =>{
+
+			document.querySelector(".js-modal2").style.display ="none";
+		}
+
+		window.mail = () => {
+
+			let para = location.hash;
+			let par = para.split("/");
+			let zoom = map.getZoom();
+			let url = "https://childcaremap.netlify.app/%23" + zoom + "/" + par[1] + "/" +par[2];
+			location.href =  "mailto:?body= App URL " + url;
+
+		}
+
+		window.line = () =>{
+
+			let para = location.hash;
+			let par = para.split("/");
+			let zoom = map.getZoom();
+			let url = "https://childcaremap.netlify.app/%23" + zoom + "/" + par[1] + "/" +par[2];
+			location.href = "line://msg/text/App URL "+ url;
+
+		}
+
 	</script>
 
 	<!-- tailwind -->
 	<script src="https://cdn.tailwindcss.com"></script>
 
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 <body>
@@ -244,6 +441,81 @@
 	<div id='map'></div>
 
 	<div id="app" class="fixed top-0 mt-2 ml-2 p-2 bg-white rounded-md left-0 border-solid border-2 border-indigo-600" onclick="display();">このマップについて</div>
+
+	<div id="app" class="fixed bottom-0 mb-2 ml-2 p-2 bg-white rounded-md left-0 border-solid border-2 border-indigo-600" onclick="display2();">シェア</div>
+
+	<div class="modal js-modal">
+		<div class="modal_bg" onClick="closed2();"></div>
+
+		　　<div class="modal_content"><span class="closed" onClick="closed2();">×</span>
+
+			<div class="kaisetu">
+				<h1 class="text-3xl pb-1 mb-5">一宮市ママパパマップとは？</h1>
+
+				<img src="./images/child.jpg" width="100%" alt="">
+
+				<p class="my-5">一宮市ママパパマップは、市内の公共施設の赤ちゃんの駅や乳幼児対応トイレをマップにしたものです。</p>
+				<p class="my-5">子育て世代の方々が、過ごしやすい毎日を送れるように...という思いからマップにしました。</p>
+				<p class="my-5">赤ちゃんたちがすくすくと育ちますように...</p>
+
+				<h1 class="text-3xl pb-1 mb-5">凡例</h1>
+
+				<p class="my-5"><span id="baby"><i class="fa-solid fa-baby"></i></span> ••• 乳幼児対応トイレ</p>
+
+				<p class="my-5"><span id="person_breastfeeding"><i class="fa-solid fa-person-breastfeeding"></i></span> ••• 授乳・おむつ替えスペース</p>
+
+				<p class="my-5"><span id="home_orange"><i class="fa-solid fa-home"></i></span> ••• 子育て支援施設</p>
+
+				<p class="my-5"><span id="home_brown"><i class="fa-solid fa-home"></i></span> ••• 児童館</p>
+
+				<p class="my-5"><span id="park">　</span> ••• ちびっ子広場</p>
+
+
+				<h1 class="text-3xl pb-1 mb-5">使用したオープンデータ</h1>
+				<a href="https://www.city.ichinomiya.aichi.jp/cgi-opd/opendata_detail.cgi?id=b1fac0d9fe002ce6b8a20b1f9efdde26aa56dd7a" target="_blank">授乳スペース</a>、一宮市、CC BY 4.0<br><br>
+
+				<a href="https://www.city.ichinomiya.aichi.jp/cgi-opd/opendata_detail.cgi?id=3a4a7ccea3f701c1897bc451d5262dcc07892150" target="_blank">乳幼児対応トイレ</a>、一宮市、CC BY 4.0<br><br>		
+
+				<a href="https://www.city.ichinomiya.aichi.jp/cgi-opd/opendata_detail.cgi?id=04f20cb58c7378f7a3579aebb1b60e3172c42887" target="_blank">ちびっ子広場</a>、一宮市、CC BY 4.0<br><br>
+
+				<a href="https://www.city.ichinomiya.aichi.jp/cgi-opd/opendata_detail.cgi?id=7283a157cd0b123129f05093fbc481420c1db4cf" target="_blank">児童館</a>、一宮市、CC BY 4.0<br><br>
+
+				<a href="https://www.city.ichinomiya.aichi.jp/cgi-opd/opendata_detail.cgi?id=8cc27be88338f911db28b92adae45920b2ddfe12" target="_blank">子育て支援施設</a>、一宮市、CC BY 4.0		
+
+				<h1 class="text-3xl pb-1 my-5">ライセンス</h1>
+				<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">CC BY 4.0国際</a>です。ご自由にご利用ください！
+
+			</div>
+
+		　　</div>
+	</div>
+
+	<center>
+		<div class="modal js-modal2">
+			<div class="modal_bg" onClick="closed3();"></div>
+
+			　　<div class="modal_content"><span class="closed" onClick="closed3();">×</span>
+
+				<textarea id="link_url" onfocus="this.select();" rows="3" class="block p-2.5 mt-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+
+				<div class="wrapper my-5">
+					<div>
+						<img src="./images/mail.png" id="mail_submit" width="120px" onclick = "mail();">
+					</div>
+
+					<div>
+						<img src="./images/line.png" id="line_submit" width="120px" onclick = "line();">
+					</div>
+
+				</div>
+
+				<div id="qr_code"></div>
+
+
+			</div>
+		</div>
+	</center>
+
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPP84V2NHB"></script>
