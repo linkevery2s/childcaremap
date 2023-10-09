@@ -5,27 +5,27 @@
 
 完成したマップはこちら　→ [一宮市ママパパマップ](https://childcaremap.netlify.app/)<br><br>
 
-# オープンデータをダウンロードする
+## オープンデータをダウンロードする
 
 一宮市の[オープンデータカタログサイト](https://www.city.ichinomiya.aichi.jp/opendata/)から、子育てに関するデータをダウンロードしました。<br><br>
 
-# csvファイルをgeoJSONファイルに変換する
+## csvファイルをgeoJSONファイルに変換する
 
 ネットで調べると様々なツールがあります。自分用に使いたいということと、後々、オープンソース化することを見越して、pythonプログラムをサクッと作ってみました。
 
 詳しくはこちらの記事をご覧ください → [csvファイルをgeoJSONファイルに変換する](https://note.com/hitoshi2s/n/nc12a4daa48f1) <br><br>
 
-# マップに載せる
+## マップに載せる
 
 [leaflet](https://leafletjs.com/)を用いて、geoJSONをマップに載せて、属性も表示させます。<br><br>
 
-# 使用したプラグイン
+## 使用したプラグイン
 
 ・[leaflet-hash](https://github.com/mlevans/leaflet-hash)・・・URLにハッシュ値（Zoomや緯度、経度）を含ませることができます。
 
 ・[Leaflet.awesome-markers](https://github.com/lennardv2/Leaflet.awesome-markers)・・・leafletはFont Awesomeと親和性が高く、地図の見栄えも良くなります。<br><br>
 
-# ライセンス
+## ライセンス
  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ja) です。
  
  ご自身が住んでいる地域の子育てマップを作ってみませんか？
