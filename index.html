@@ -26,7 +26,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" integrity="sha512-cUoWMYmv4H9TGP4hbm1mIjYo90WzIQFo/5jj+P5tQcDTf+iVR59RyIj/a9fRsBxzxt5Dnv/Ex7MzRIxcDwaOLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-pulse-icon@0.1.0/src/L.Icon.Pulse.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/leaflet-pulse-icon@0.1.0/src/L.Icon.Pulse.min.js"></script>
 
 	<script src="data/toilet.geojson"></script>
 	<script src="data/milk.geojson"></script>
@@ -225,6 +232,9 @@
 				maxZoom: 19,
 				attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a><br>更新日：2023年10月5日、<a href="https://hitoshi2s.netlify.app/" target="_blank">仁志</a>'
 			}).addTo(map);
+
+			let gps_button = L.easyButton('fa-location-arrow', function(){ GPS();}, {position: 'topright'}).addTo( map );
+
 
 			/* 乳幼児対応トイレ */
 			let toilet_m= L.geoJSON(toilet, {onEachFeature: popup_toilet, pointToLayer: toilet_pink});
@@ -428,6 +438,36 @@
 			location.href = "line://msg/text/App URL "+ url;
 
 		}
+
+		let ido; let keido; let marker;
+		let gps_get = (position) => {
+			ido = position.coords.latitude;
+			keido = position.coords.longitude;
+			map.setView([ido, keido], 15);
+
+			let pulsingIcon = L.icon.pulse({iconSize:[12,12],color:'blue', fillColor: 'blue'});
+
+			if(map && marker){
+				map.removeLayer(marker);
+				marker = null;
+			}
+
+			marker = L.marker([ido, keido] ,{icon: pulsingIcon}).addTo(map);
+
+		}
+
+		let gps_error = (error) => {
+			alert("エラーが発生したので、現在地を取得できませんでした。");
+		}
+
+		let GPS = () =>{
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(gps_get,gps_error);
+			} else {
+				alert("エラーが発生したので、現在地を取得できませんでした。");
+			}
+		}
+
 
 	</script>
 
