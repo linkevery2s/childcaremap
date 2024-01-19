@@ -41,6 +41,14 @@
 	<script src="data/child.geojson"></script>
 	<script src="data/childrenhouse.geojson"></script>
 
+	<link rel="manifest" href="./manifest.json">
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('./service-worker.js').then(function() {
+				console.log('Service Worker Registered');
+			});
+		}
+	</script>
 
 	<style>
 		html, body, #map{
